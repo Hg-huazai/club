@@ -1,0 +1,124 @@
+<!--pages/home/details/details.wxml-->
+<view class="content">
+  <view class="active-top">
+    <view class="img">
+      <image mode="widthFix" src="/static/home/images/swiper_02.png"></image>
+      <view class="state">已结束</view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="top">欢迎加入"下班一起玩"俱乐部</view>
+    <view class="box-info">
+      <view class="text">
+        <icon class="iconfont icon-shizhong"></icon>
+        <text class="time">时间 : 2020/03/01 18:00~2020/03/05 18:00</text>
+      </view>
+      <view class="text">
+        <icon class="iconfont icon-didian"></icon>
+        <text class="time">地址 : 广州市天河区电脑城金泽大厦702</text>
+      </view>
+      <view class="text">
+        <icon class="iconfont icon-jiage"></icon>
+        <text class="time">价格 : <text class="number">88元</text>
+          <text decode>&nbsp;&nbsp;&nbsp;&nbsp;</text>
+          <text class="vip">会员价</text>
+          <text decode>&nbsp;</text>
+          <text class="money">58元</text>
+        </text>
+      </view>
+    </view>
+    <view class="box-bottom">
+      <view class="img in-b">
+        <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+      </view>
+      <view class="pop in-b">68人已报名 <i class="iconfont icon-right-r-copy"></i> </view>
+    </view>
+  </view>
+  
+  <!-- 活动介绍 -->
+  <view class="info1">
+  <!-- ----------------------------------------------主办方 -->
+    <view class="top">主办方/活动达人</view>
+    <view class="boss">
+      <view class="img left-l">
+        <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+      </view>
+      <view class="cunzhang left-l">
+        <view class="text1">灿烂单身白领婚恋圈 <text>个人认证</text></view>
+        <view class="text2">"灿烂单身白领婚恋圈" 真实靠谱，婚恋效果好，打造高品质婚恋交友平台打造高品质婚恋交友平</view>
+        <view class="left-l xin">
+          <view class="in-b"><icon class="iconfont icon-xin"></icon>粉丝 <text>559</text></view>
+          <view class="in-b"><icon class="iconfont icon-biaoqian"></icon>粉丝 <text>66                                          9</text></view>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+    <!-- ----------------------------------------------活动详情 -->
+    <view class="info1">
+      <view class="top">活动详情</view>
+      <view class="active">
+        <view class="theme">主题: 狼人杀</view>
+        <view class="time">时间：</view>
+        <view class="text">11月14日 （周四）晚8：30~9：30</view>
+        <view class="time">形式：</view>
+        <view class="text">第六届欧冠未呕吐解放军哦我IE积分叫我诶见佛忘记了奇偶IE五鼓风机偶家发加沃尔夫我借我奇偶饭加我</view>
+      </view>
+    </view>
+    <!-- ----------------------------------------------活动Q/A -->
+    
+    <!-- ----------------------------------------------公众号介绍 -->
+    <view class="info1">
+      <view class="top">活动Q/A</view>
+      <view class="active">
+        <!-- <view class="problem">常见问题</view> -->
+        <view class="text1 textq">Q : 如何联系到其他小伙伴呢</view>
+        <view class="text">A : 11月14日 （周四）晚8：30~9：30</view>
+        <view class="text1">Q : 报名参加活动临时有事来不了怎么办</view>
+        <view class="text">A : 第六届欧冠未呕吐解放军哦我IE积分叫我诶见佛忘记了奇偶IE五鼓风机偶家发加沃尔夫我借我奇偶饭加我</view>
+        
+      </view>
+    </view>
+
+    <view class="info2">
+      <!-- <view class="top">联系客服</view> -->
+      <view class="active">
+        <view class="kefu">联系客服</view>
+        <view class="box">
+          <view class="in-b left">
+            <view class="img" bindtap="imgtap">
+              <image mode="widthFix" src="/static/home/images/images/erweima2_03.png" show-menu-by-longpress="true"></image>
+            </view>
+          </view>
+          <view class="in-b right">
+            <view class="text1">下班一起玩公众号</view>
+            <view class="text2">每天下班后活动推荐</view>
+            <view class="text3">微信公众号直接搜索“下班一起玩”</view>
+          </view>
+          <view class="welcome">欢迎加入下班一起玩</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- ----------------点击二维码图片 -->
+    <view class="content5 {{show ? 'img' : ''}}" catchtouchmove="true">
+      <view class="bg" bindtap="bgtap"></view>
+      <view class="box">
+        <image mode="widthFix" src="/static/home/images/images/erweima_03.png"></image>
+      </view>
+    </view>
+  
+  <view class="bottom">
+    <view class="item">
+      <icon class="iconfont icon-fenxiang" style="color: #c5b265"></icon>
+      <text>分享</text>
+    </view>
+    <view class="item">
+      <icon class="iconfont icon-tupian" style="color: #c5b265"></icon>
+      <text>生成海报</text>
+    </view>
+    <view class="item">
+      <button size="mini">报名</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,174 @@
+<!--pages/home/index/index.wxml-->
+<view class="content">
+  <!-- 城市选择 -->
+  <view class="content5 {{show ? 'city' : ''}}" catchtouchmove="true">
+    <view class="bg" bindtap="bgtap"></view>
+    <view class="box">
+      <view class="box-top" >
+        <i class="iconfont icon-cuohao right-r" bindtap="closetap"></i>
+        <view class="clear"></view>
+      </view>
+      <view class="box-name">-请选择你的城市-</view>
+      <view class="box-city">
+        <view class="item" bindtap="nametap" wx:for="{{city}}" wx:key="index" data-state="{{index}}">
+          <!-- <iconfont name="{{item.icon}}"></iconfont> -->
+          <view class="img in-b">
+            <image mode="widthFix" src="{{item.src}}"></image>
+          </view>
+          <view class="text">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="box-bottom">-其他城市-</view>
+      <view class="item-bottom">
+        <view class="item">
+          <!-- <iconfont name="wozuji"></iconfont> -->
+          <view class="img in-b">
+            <image mode="widthFix" src="/static/home/images/images/city_03.png"></image>
+          </view>
+          <view class="text">全国</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content1">
+    <view class="content1-top">
+      <view class="city left-l" bindtap="citytap">{{name}}<i class="iconfont {{icon ? 'icon-jiantou':'icon-jiantou-copy'}}"></i></view>
+      <view class="input left-l"><input placeholder="路线/领队/游记"></input> <i class="iconfont icon-sousuo"></i></view>
+      <view class="time right-r"><i class="iconfont icon-shizhong"></i></view>
+      <view class="clear"></view>
+    </view>
+    <view class="content1-swiper">
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+        <swiper-item>
+          <image mode="widthFix" src="/static/home/images/swiper_02.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="/static/home/images/swiper_02.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="/static/home/images/swiper_02.png"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="content2">
+    <view class="box-item">
+      <view class="item">
+        <!-- <view class="iconfont"><iconfont name="lvyou1"></iconfont></view> -->
+        <!-- <view name="lvyou1"></view> -->
+        <iconfont name="ziyuan1"></iconfont>
+        <view class="text">享美食</view>
+      </view>
+      <view class="item">
+        <!-- <view class="iconfont youxi"></view> -->
+        <iconfont name="youxi"></iconfont>
+        <view class="text">玩桌游</view>
+      </view>
+      <view class="item">
+        <iconfont name="diy"></iconfont>
+        <view class="text">DIY</view>
+      </view>
+      <view class="item">
+        <iconfont name="wozuji"></iconfont>
+        <view class="text">趣运动</view>
+      </view>
+      <view class="item">
+        <iconfont name="huoche"></iconfont>
+        <view class="text">去户外</view>
+      </view>
+      <view class="item">
+        <iconfont name="tongxue"></iconfont>
+        <view class="text">交友聚会</view>
+      </view>
+      <view class="item">
+        <iconfont name="rili1"></iconfont>
+        <view class="text">活动日历</view>
+      </view>
+      <view class="item">
+        <iconfont name="tuandui2"></iconfont>
+        <view class="text">团队定制</view>
+      </view>
+      <view class="item">
+        <iconfont name="huiyuan"></iconfont>
+        <view class="text">会员专享</view>
+      </view>
+      <view class="item">
+        <iconfont name="fenlei1"></iconfont>
+        <view class="text">全部分类</view>
+      </view>
+    </view>
+  </view>
+  <view class="content3">
+    <view class="item">
+      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
+    </view>
+    <view class="item">
+      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
+    </view>
+    <view class="item">
+      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
+    </view>
+  </view>
+  <view class="content4">
+    <navigator class="item1" url="/pages/home/details/details">
+      <view class="item1-top">
+        <view class="right-r">活动结束</view>
+        <view class="clear"></view>
+      </view>
+      <view class="item1-center">
+        <view class="left-l img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+        </view>
+        <view class="left-l info">
+          <view class="text">老狼老狼几点啦？</view>
+          <view class="text1">时间: 2020-03-01 18：00~2020-03-02 18:00</view>
+          <view class="text1">地址: 广州市天河区电脑城</view>
+        </view>
+        <view class="clear"></view>
+      </view>
+      <view class="item1-bottom">
+        <view class="left-l">
+          <view class="img in-b">
+            <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+          </view>
+          <view class="text in-b">还差<text>14</text>人</view>
+        </view>
+        <view class="right-r">￥35.0</view>
+        <view class="clear"></view>
+      </view>
+      <view class="float">
+        <i class="iconfont icon-dongwutubiao-xianxing-zhu"></i>
+        组团活动.狼人CLU...
+      </view>
+    </navigator>
+    <navigator class="item2" url="/pages/home/details/details">
+      <view class="item2-top">
+        <view class="img">
+          <!-- <image mode="widthFix" src="/static/home/images/swiper_02.png"></image> -->
+          <image src="/static/home/images/swiper_02.png"></image>
+          <view class="info">
+            <view class="sign-up">
+              <view class="left-l">
+                <i class="iconfont icon-dongwutubiao-xianxing-zhu"></i>
+                · 情感课程
+              </view>
+              <view class="right-r">报名中</view>
+              <view class="clear"></view>
+            </view>
+            <view class="theme">【有缘情感】脱单宝典,专业情感老师在线上课程</view>
+          </view>
+        </view>
+        
+      </view>
+      <view class="item2-bottom">
+        <view class="left-l">
+          <view class="time">时间: 03/05 周四 20:00~03/06</view>
+          <view class="text">地址: 广州市天河区电脑城河脑城城河脑城河区电脑城</view>
+        </view>
+        <view class="right-r">￥229.0</view>
+        <view class="clear"></view>
+      </view>
+    </navigator>
+  </view>
+  
+</view>

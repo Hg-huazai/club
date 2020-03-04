@@ -1,0 +1,55 @@
+<!--pages/member/index/index.wxml-->
+<view>
+  <view class="content1">
+    <view class="bg">
+      <swiper autoplay circular>
+        <swiper-item><image src="/static/home/images/images/tupian_02.png" ></image></swiper-item>
+        <swiper-item><image src="/static/home/images/images/tupian_02.png" ></image></swiper-item>
+        <swiper-item><image src="/static/home/images/images/tupian_02.png" ></image></swiper-item>
+      </swiper>
+      <view class="info">
+        <view class="name">梦里花落</view>
+        <view class="character" ><text>“</text> 成熟稳重，兴趣广泛，擅长沟通<text>”</text></view>
+      </view>
+      <view class="active">
+        <view class="img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+        </view>
+      </view>
+      <view class="gender">
+        <icon class="iconfont icon-xingbienan in-b"></icon>
+      </view>
+    </view>
+  </view>
+  <view class="content2">
+    <view class="top">个人资料</view>
+    <view class="car">
+      <view class="item">35岁</view>
+      <view class="item">鼠</view>
+      <view class="item">水瓶座</view>
+      <view class="item">170cm</view>
+      <view class="item">72kg</view>
+      <view class="item">本科</view>
+      <view class="item">北京理科大学</view>
+      <view class="item">工作地：广州市</view>
+      <view class="item">家乡：永州市</view>
+      <view class="item">行业：计算机IT程序员</view>
+    </view>
+    <view class="top">择偶标准</view>
+    <view class="from">
+      <form>
+        <view class="item">
+          <view class="left-l right">
+            <textarea placeholder="请写下择偶标准:" maxlength="60"></textarea>
+          </view>
+          <view class="clear"></view>
+        </view>
+        <view class="button">
+          <button class="left-l">交换微信</button>
+          <button class="right-r">分享</button>
+          <view class="clear"></view>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

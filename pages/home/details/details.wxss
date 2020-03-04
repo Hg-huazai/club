@@ -1,0 +1,339 @@
+/* pages/home/details/details.wxss */
+page {
+  background-color: #fafafa;
+  padding-bottom: 120rpx;
+}
+.iconfont {
+  position: relative;
+}
+.active-top {
+  margin-bottom: 370rpx;
+}
+.active-top .img {
+  position: relative;
+}
+.active-top image{
+  width: 100%;
+}
+.active-top .img .state{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #cab268;
+  padding: 10rpx 30rpx;
+  border-radius: 0 0 0 30rpx;
+  font-weight: bold;
+  font-size: 25rpx;
+}
+.info {
+  width: 94%;
+  position: absolute;
+  top: 234rpx;
+  margin: 0 3%;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 0 1rpx 1rpx rgba(0,0,0,0.1);
+  z-index: 120;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.info .top{
+  font-weight: bold;
+  font-size: 35rpx;
+  padding-bottom: 10rpx;
+}
+.info .text .iconfont{
+  font-size: 45rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+  color: #e1ce8c;
+}
+.info .text .iconfont.icon-jiage{
+  font-size: 40rpx;
+}
+.info .text {
+  padding: 10rpx 0;
+}
+.info .text .time{
+  font-size: 24rpx;
+  vertical-align: middle
+}
+.info .text .time .vip{
+  color: red;
+}
+.info .text .time .number{
+  font-weight: bold;
+}
+.info .text .time .money{
+  color: red;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.info .box-info {
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #dcdcdc;
+  margin-bottom: 20rpx;
+}
+.info .box-bottom .img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+.info .box-bottom .img image{
+  width: 60rpx;
+}
+.info .box-bottom .pop{
+  vertical-align: middle;
+  font-size: 30rpx;
+}
+.info .box-bottom .pop .iconfont {
+  font-size: 20rpx;
+}
+
+.info1 {
+  background-color: #fff;
+  margin: 20rpx;
+  border-radius: 5rpx;
+  padding: 20rpx;
+  padding-top: 0;
+  box-shadow: 0 0 1rpx 1rpx rgba(0,0,0,0.1);
+  margin-bottom: 30rpx;
+}
+.info1 .top{
+  padding: 25rpx 0;
+  border-bottom: 2rpx dotted #dcdcdc;
+  color: #c4af80;
+  font-size: 35rpx;
+}
+.info1 .boss {
+  padding: 20rpx 0;
+}
+.info1 .boss .img {
+  /* width: 90rpx; */
+  /* height: 90rpx; */
+  /* border-radius: 50%;
+  overflow: hidden; */
+  vertical-align: middle;
+  /* margin-right: 30rpx; */
+  width: 22%;
+  text-align: center;
+  padding-top: 20rpx;
+}
+.info1 .boss .img image {
+  width: 120rpx;
+}
+.info1 .boss .cunzhang {
+  /* vertical-align: middle;
+  font-weight: bold;
+  font-size: 34rpx; */
+  width: 75%;
+  padding-left: 10rpx;
+}
+.info1 .boss .cunzhang .text1{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.info1 .boss .cunzhang .text1 text{
+  font-size: 20rpx;
+  display: inline-block;
+  padding: 5rpx 15rpx;
+  background-color: #ff9c01;
+  color: #fff;
+  border-radius: 15rpx;
+  margin-left:10rpx;
+}
+.info1 .boss .cunzhang .text2{
+  /* font-weight: bold; */
+  font-size: 26rpx;
+  color: #ababab;
+  margin-top: 15rpx;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+.info1 .boss .xin .in-b{
+  font-size: 30rpx;
+  color: #acacac;
+  margin-right: 30rpx;
+}
+.info1 .boss .xin .iconfont{
+  font-size: 35rpx;
+  color: #acacac;
+  margin-right: 5rpx;
+}
+.info1 .boss .xin text{
+  font-size: 34rpx;
+  color: #515151;
+  margin-left: 15rpx;
+}
+/* .info1 .boss .xin .iconfont.icon-biaoqian{
+  font-size: 38rpx;
+  color: #acacac;
+} */
+.info1 .active .theme{
+  text-align: center;
+  font-weight: bold;
+  font-size: 32rpx;
+  padding-top: 30rpx;
+}
+.info1 .active .time{
+  font-weight: bold;
+  font-size: 28rpx;
+  padding-top: 30rpx;
+  padding-bottom: 10rpx;
+}
+.info1 .active .text{
+  font-size: 28rpx;
+  color: #999999;
+  padding-bottom: 10rpx;
+}
+.info1 .active .problem{
+  background-color: #f7f7f7;
+  color: #e0893c;
+  padding: 10rpx 10rpx;
+  margin: 15rpx 0;
+}
+.info1 .active .text1 {
+  font-size: 28rpx;
+  color: #000;
+}
+.info1 .active .text1.textq{
+  margin-top: 20rpx;
+}
+.info2 {
+  padding: 20rpx;
+}
+.info2 .active .kefu {
+  text-align: center;
+  border: 2rpx solid #fbdd4b;
+  color: #e9852d;
+  padding: 20rpx 0;
+  border-radius: 5rpx;
+}
+.info2 .active .box {
+  border: 2rpx solid #fbdd4b;
+  margin-top: 40rpx;
+  padding: 40rpx 50rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  position: relative;
+}
+.info2 .active .left {
+  width: 36%;
+  vertical-align:middle;
+}
+.info2 .active .left .img {
+  border: 2rpx solid #000000;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  margin-right: 20rpx;
+}
+.info2 .active .left .img image {
+  width: 160rpx;
+}
+.info2 .active .in-b.right {
+  border: 2rpx solid #fbdd4b;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  width: 58%;
+  height: 190rpx;
+  vertical-align:middle;
+  box-sizing: border-box;
+  text-align: center;
+  color: #f28423;
+  padding-top: 30rpx;
+}
+.info2 .active .right .text1{
+  font-size: 28rpx;
+  color: #f28423;
+  margin-bottom: 10rpx;
+  
+}
+.info2 .active .right .text2{
+  font-size: 24rpx;
+  margin-bottom: 8rpx;
+}
+.info2 .active .right .text3{
+  font-size: 18rpx;
+}
+.info2 .active .welcome{
+  background-color: #fff;
+  color: #f28423;
+  padding-right: 50rpx;
+  padding-left: 20rpx;
+  position: absolute;
+  top: -25rpx;
+}
+
+.content5 {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.content5.img {
+  display: none;
+}
+.content5 .bg {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+}
+.content5 .box {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30%;
+}
+.content5 .box image{
+  width: 100%;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  padding: 15rpx 0;
+  /* height: 120rpx;
+  line-height: 120rpx; */
+  box-sizing: border-box;
+  border-top: 2rpx solid #dcdcdc;
+
+}
+.bottom .item{
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+  height: 81rpx;
+  line-height: 81rpx;
+  /* background-color: pink; */
+}
+.bottom .item .iconfont {
+  font-size: 50rpx;
+  vertical-align: middle;
+  padding-right: 15rpx;
+}
+.bottom .item text {
+  font-size:30rpx;
+  vertical-align: middle;
+}
+.bottom .item button {
+  flex: 1;
+  text-align: center;
+  background-color: #cab268;
+  color: #fff;
+  width: 80%;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+}

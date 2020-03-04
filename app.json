@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/home/details/details",
+    "pages/news/index/index",
+    "pages/member/index/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e00702",
+    "navigationBarTitleText": "下班一起玩",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff3d3d",
+    "list": [{
+      "pagePath": "pages/home/index/index",
+      "text": "活动",
+      "iconPath": "static/tabbar/icon1.png",
+      "selectedIconPath": "static/tabbar/icon1_active.png"
+    },
+    {
+      "pagePath": "pages/news/index/index",
+      "text": "消息",
+      "iconPath": "static/tabbar/icon2.png",
+      "selectedIconPath": "static/tabbar/icon2_active.png"
+    },
+    {
+      "pagePath": "pages/member/index/index",
+      "text": "我的",
+      "iconPath": "static/tabbar/icon3.png",
+      "selectedIconPath": "static/tabbar/icon3_active.png"
+    }]
+  },
+  "usingComponents": {
+    "iconfont": "/iconfont/iconfont"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
