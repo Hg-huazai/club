@@ -1,11 +1,11 @@
-// pages/member/index/index.js
+// pages/member/info/info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**

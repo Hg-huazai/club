@@ -1,0 +1,134 @@
+/* pages/member/info/info.wxss */
+.content1 .bg {
+  width: 100%;
+  position: relative;
+}
+.content1 swiper {
+  height: 550rpx;
+  margin-bottom: 210rpx;
+}
+.content1 swiper swiper-item{
+  height: 550rpx;
+}
+.content1 swiper swiper-item image{
+  width: 100%;
+  height: 550rpx;
+}
+
+.content1 .info{
+  position: absolute;
+  top: 420rpx;
+  width: 90%;
+  background-color: #fff;
+  box-shadow: 1rpx 5rpx 2rpx 2rpx rgba(0, 0, 0, .2);
+  margin: 0 5%;
+  padding-top: 100rpx;
+  padding-bottom: 30rpx;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+
+}
+.content1 .info .name{
+  text-align: center;
+  font-size: 36rpx;
+  padding-bottom: 20rpx;
+}
+.content1 .info .character{
+  text-align: center;
+  color: #666666;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+}
+.content1 .info .character text{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.content1 .active {
+  position: absolute;
+  top: 390rpx;
+  width: 100%;
+  text-align: center;
+  
+}
+.content1 .active .img {
+  border-radius: 50%;
+  overflow: hidden;
+  
+}
+.content1 .active .img image{
+  width: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content1 .bg .gender {
+  position: absolute;
+  top: 480rpx;
+  left: 370rpx;
+}
+.content1 .bg .gender .icon-xingbienan{
+  font-size: 60rpx;
+  color: #8ca3ff;
+}
+
+.content2 {
+  margin-top: 20rpx;
+  position: absolute;
+
+}
+.content2 .top {
+  text-align: center;
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+.content2 .car {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40rpx;
+  padding-bottom: 10rpx;
+  text-align: center;
+}
+.content2 .car .item {
+  background-color: #fef4f3;
+  padding: 8rpx 20rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 25rpx;
+  color: #ff7688;
+  border-radius: 10rpx;
+}
+.content2 .from {
+  margin: 40rpx;
+  margin-top: 10rpx;
+}
+.content2 .from .item {
+  padding: 20rpx 0;
+}
+.content2 .from .left {
+  width: 22%;
+  font-size: 30rpx;
+  margin-right: 2%;
+}
+.content2 .from .left .text{
+  float: right;
+}
+.content2 .from .right {
+  width: 60%;
+}
+.content2 .from .item .text {
+ text-align: center;
+ /* border: 1rpx solid #fef4f3; */
+ padding: 10rpx 20rpx;
+ color: #666666;
+font-size: 30rpx;
+}
+.content2 .from .button button {
+ width: 45%;
+}
+.content2 .from  .button {
+ margin-bottom: 30rpx;
+}

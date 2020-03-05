@@ -4,6 +4,7 @@
     "pages/home/details/details",
     "pages/news/index/index",
     "pages/member/index/index",
+    "pages/member/info/info",
     "pages/index/index",
     "pages/logs/logs"
   ],
