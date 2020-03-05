@@ -11,6 +11,7 @@ page {
 }
 .content .content-item .left-l .img{
   width: 120rpx;
+  height: 120rpx;
   padding: 8rpx;
   border: 2rpx solid #eeeeee;
   border-radius: 50%;
@@ -20,6 +21,7 @@ page {
 }
 .content .content-item .left-l .img image{
   width: 100rpx;
+  height: 100rpx;
 }
 .content .content-item .left-l .text {
   vertical-align: middle;
@@ -72,6 +74,7 @@ page {
   display: inline-block;
   color: #8c8c8c;
   padding-right: 20rpx;
+  font-size: 30rpx;
 }
 .content .content-item1 .right-r .text2 {
   vertical-align: middle;
@@ -80,6 +83,6 @@ page {
   color: #fff;
   border-radius: 40rpx;
   margin-right: 20rpx;
-  padding: 7rpx 20rpx;
-  font-size: 22rpx;
+  padding: 5rpx 15rpx;
+  font-size: 20rpx;
 }

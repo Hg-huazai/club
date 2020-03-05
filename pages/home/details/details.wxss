@@ -262,7 +262,7 @@ overflow: hidden;
   font-size: 18rpx;
 }
 .info2 .active .welcome{
-  background-color: #fff;
+  background-color: #fafafa;
   color: #f28423;
   padding-right: 50rpx;
   padding-left: 20rpx;

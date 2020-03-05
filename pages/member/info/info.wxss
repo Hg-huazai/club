@@ -128,6 +128,13 @@ font-size: 30rpx;
 }
 .content2 .from .button button {
  width: 45%;
+ background-color: #03ae56;
+ color: #8ce9b1;
+}
+.content2 .from .button .right-r  {
+ width: 45%;
+ background-color: #d7442e;
+ color: #f99b91;
 }
 .content2 .from  .button {
  margin-bottom: 30rpx;
