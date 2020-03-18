@@ -1,2 +1,10 @@
 <!--pages/news/index/index.wxml-->
-<text>pages/news/index/index.wxml</text>
+<view class="tabbar">
+  <block wx:for="{{show ? tabbar1 : tabbar2 }}" wx:key="{{index}}">
+    <navigator class="tabbar-item {{index == curren ? 'active' : ''}}" data-curren="{{index}}" bindtap="tabbar" url="{{item.url}}">
+      <view class="iconfont {{item.icon}}"></view>
+      <view class="text">{{item.name}}</view>
+    </navigator>
+  </block>
+</view>
+<h-tabbar tabbar="{{tabbar}}" tabcurren="{{tabcurren}}"></h-tabbar>

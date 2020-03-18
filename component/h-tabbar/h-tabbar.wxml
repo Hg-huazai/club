@@ -1,0 +1,9 @@
+<!--component/H-tabbar/H-tabbar.wxml-->
+<view class="tabbar">
+  <block wx:for="{{tabbar ? tabbar1 : tabbar2 }}" wx:key="{{index}}">
+    <navigator class="tabbar-item {{index == tabcurren ? 'active' : ''}}" data-curren="{{index}}" bindtap="tabbar" url="{{item.url}}">
+      <view class="iconfont {{item.icon}}"></view>
+      <view class="text">{{item.name}}</view>
+    </navigator>
+  </block>
+</view>

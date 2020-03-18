@@ -17,7 +17,7 @@
       </view>
       <view class="clear"></view>
     </view>
-    <view class="content-item1">
+    <navigator class="content-item1" hover-class='none' url='../info/info' bindtap='tapIndex'>
       <view class="left-l">
         <icon class="iconfont icon-xinyuandan"></icon>
         <text class="text">个人动态</text>
@@ -26,7 +26,7 @@
         <icon class="iconfont icon-right-r-copy"></icon>
       </view> 
       <view class="clear"></view>
-    </view>
+    </navigator>
     <view class="content-item1">
       <view class="left-l">
         <icon class="iconfont icon-lingjuanzhongxin"></icon>
@@ -51,4 +51,5 @@
       <view class="clear"></view>
     </view>
   </view>
+  <h-tabbar tabbar="{{tabbar}}" tabcurren="{{tabcurren}}"></h-tabbar>
 </view>

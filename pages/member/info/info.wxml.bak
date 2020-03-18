@@ -1,0 +1,77 @@
+<!--pages/member/info/info.wxml-->
+<view>
+  <view class="content1">
+    <view class="bg">
+      <swiper autoplay circular indicator-dots indicator-color="#fff" indicator-active-color="#ff6a87">
+        <block wx:for="{{photos}}" wx:key="{{index}}">
+          <swiper-item><image src="{{item.imgPath}}" mode="widthFix"></image></swiper-item>
+        </block>
+        <!-- <swiper-item><image src="/images/images/huage2.jpg" mode="widthFix"></image></swiper-item>
+        <swiper-item><image src="/images/images/huage2.jpg" mode="widthFix"></image></swiper-item>
+        <swiper-item><image src="/images/images/huage2.jpg" mode="widthFix"></image></swiper-item> -->
+      </swiper>
+      <!-- 收藏图标 -->
+      <view class="like" bindtap="liketap">
+        <icon class="iconfont {{like ? 'icon-mian' : 'icon-mian-copy'}} in-b"></icon>
+      </view>
+      <view class="info">
+<<<<<<< HEAD
+        <view class="name">{{fuser.nickname}}</view>
+=======
+        <view class="name"><text></text>{{fuser.nickname}}<text></text></view>
+>>>>>>> c66394b84653aa4d6c457d0ec3275b56c483f076
+        <!-- <view class="character" ><text>'</text>{{fuser.nickname}}<text>'</text></view> -->
+        <view class="character" ><text>"</text>{{user.intro}}<text>"</text></view>
+      </view>
+      <view class="active">
+        <!-- <view class="img">
+          <image mode="widthFix" src="{{fuser.headimgurl}}"></image>
+        </view> -->
+      </view>
+      <!-- <view class="gender">
+        <icon class="iconfont icon-xingbienan in-b"></icon>
+      </view> -->
+    </view>
+  </view>
+  <view class="content2">
+    <!-- <view class="top"><i class="iconfont icon-xinzenghengxian-"></i><text>个人资料</text><i class="iconfont icon-xinzenghengxian-"></i></view> -->
+    <view class="car">
+      <view class="gender">
+        <!-- 男图标 -->
+        <block wx:if="{{fuser.sex=='1'}}">
+        <icon class="iconfont icon-xingbienan1 in-b"></icon>
+        </block>
+        <!-- 女图标 -->
+        <block wx:if="{{fuser.sex=='2'}}">
+        <icon class="iconfont icon-xingbienv1 in-b"></icon>
+        </block>
+      </view>
+      <view class="item">{{user.age}}岁</view>
+      <view class="item">{{starArray[user.star]}}</view>
+      <view class="item">{{user.high}}cm</view>
+      <view class="item">{{eduArray[user.edu]}}</view>
+      <view class="item">{{user.city}}</view>
+      <view class="item">年收入:{{feeArray[user.money]}}</view>
+      <view class="item">{{marryArray[user.marry]}}</view>
+      <view class="item">{{user.school}}</view>
+      <!-- <view class="item">{{user.city}}</view> -->
+      <view class="item">行业：{{workArray[user.work]}}</view>
+      <view class="item">兴趣爱好：{{user.likes}}</view>
+    </view>
+    <view class="top"><i class="iconfont icon-xinzenghengxian-"></i><text>择偶标准</text><i class="iconfont icon-xinzenghengxian-"></i></view>
+    <view class="from">
+      <form>
+        <view class="item">
+          <view class="text">{{user.standard}}</view>
+        </view>
+        <view class="button">
+          
+          <button class="left-l" wx:if="{{ownopenid==openid}}" bindtap="editUser">编辑资料</button>
+          <button class="right-r" open-type="share">分享</button>
+          <view class="clear"></view>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>
+

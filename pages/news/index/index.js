@@ -5,14 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabbar1:[
+      { name: '活动', icon: 'icon-huodong', url: '/pages/home/index/index'},
+      { name: '消息', icon: 'icon-xiaoxi6', url: '/pages/news/index/index'},
+      { name: '我的', icon: 'icon-wodedangxuan', url: '/pages/member/index/index'},
+    ],
+    tabbar2: [
+      { name: '活动', icon: 'icon-huodong', url: '/pages/home/index/index'},
+      { name: '嘉宾', icon: 'icon-jiabin', url: '/pages/vip/index/index' },
+      { name: '消息', icon: 'icon-xiaoxi6', url: '/pages/news/index/index'},
+      { name: '我的', icon: 'icon-wodedangxuan', url: '/pages/member/index/index'},
+    ],
+    show: true,
+    curren: 0,
+    tabbar: false,
+    tabcurren: 2,
+  },
+  tabbar(e){
+    // console.log(e)
+    this.setData({
+      curren: e.currentTarget.dataset.curren
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.tabbar)
+    this.setData({
+      tabcurren: options.tabbar
+    })
   },
 
   /**

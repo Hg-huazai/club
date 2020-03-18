@@ -1,0 +1,28 @@
+<template name='good'>
+	<view class='good' bindtap='handleTapActivity' id="{{good.id}}">
+		<image src="{{good.img}}" mode="aspectFill"></image>
+		<view class='mask'></view>
+		<view class='info'>
+			<view class='title'>
+				<text>{{good.title}}</text>
+			</view>
+			<view class='detail'>
+				<view class='timeinfo'>
+				<text>{{good.address}}</text>
+				
+				</view>
+				<view class='address' >
+				<text>{{good.km}}</text>
+				
+				</view>
+			</view>
+
+		</view>
+
+		<view class='bottom'>
+		<view class='price'>{{good.startTime}}</view>
+		<view class='oldprice'></view>
+		<view class='selled'>已报名{{good.ausize}}/ {{good.maxNum}}</view>
+		</view>
+	</view>
+</template>

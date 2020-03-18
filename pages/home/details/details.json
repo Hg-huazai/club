@@ -1,4 +1,8 @@
+
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "painter": "/components/painter/painter",
+    "authorize": "/components/authorize/authorize"
+  },
   "navigationBarTitleText": "活动详情"
 }

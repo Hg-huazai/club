@@ -1,0 +1,25 @@
+/* component/H-tabbar/H-tabbar.wxss */
+.tabbar {
+  /* background-color: pink; */
+  display: flex;
+  padding: 5rpx 0;
+  border-top: 1rpx solid #eeeeee;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.tabbar .tabbar-item{
+  flex: 1;
+  text-align: center;
+  color: #999999;
+}
+.tabbar .tabbar-item.active{
+  color: #e00702;
+}
+.tabbar .tabbar-item .iconfont{
+  font-size: 50rpx;
+}
+.tabbar .tabbar-item .text{
+  font-size: 22rpx;
+}

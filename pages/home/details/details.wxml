@@ -1,37 +1,81 @@
-<!--pages/home/details/details.wxml-->
+<!--pages/details/details.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<!-- ----------------------------------------------------------------------------H-start -->
 <view class="content">
   <view class="active-top">
-    <view class="img">
-      <image mode="widthFix" src="/static/home/images/swiper_02.png"></image>
-      <view class="state">已结束</view>
-    </view>
+    <!-- <view class="img" wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <image mode="scaleToFill" src="{{item.imgPath}}" bindtap='banner' data-index='{{index}}'></image>
+    </view> -->
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+          <image mode="scaleToFill" src="{{item.imgPath}}"></image>
+        </swiper-item>
+      </swiper>
   </view>
+  <!-- 浏览量 -->
+  <view class="top-liulan">浏览{{activity.click}}</view>
   <view class="info">
-    <view class="top">欢迎加入"下班一起玩"俱乐部</view>
+    <!-- 分类 -->
+    <view class="info-classfly-bg"></view>
+    <view class="info-classfly">{{typename}}</view>
+
+    <i class="iconfont icon-zhang bg color1" wx:if="{{canJoin == '1'}}"></i>
+    <i class="iconfont icon-zhang bg color2" wx:if="{{canJoin == '2'}}"></i>
+    <i class="iconfont icon-zhang bg color3" wx:if="{{canJoin == '3'}}"></i>
+    <view class="state color1" wx:if="{{canJoin == '1'}}">报名中</view>
+    <view class="state color2" wx:if="{{canJoin == '2'}}">已满员</view>
+    <view class="state color3" wx:if="{{canJoin == '3'}}">已成行</view>
+  <!-- 标题 -->
+    <view class="top">{{activity.title}}</view>
     <view class="box-info">
       <view class="text">
         <icon class="iconfont icon-shizhong"></icon>
-        <text class="time">时间 : 2020/03/01 18:00~2020/03/05 18:00</text>
+        <!-- 时间 -->
+        <text class="time">时间 : {{activity.startTime}}</text>
       </view>
       <view class="text">
         <icon class="iconfont icon-didian"></icon>
-        <text class="time">地址 : 广州市天河区电脑城金泽大厦702</text>
+        <!-- 地点 -->
+        <text class="time">地址 : {{activity.addressName}}</text>
       </view>
       <view class="text">
         <icon class="iconfont icon-jiage"></icon>
-        <text class="time">价格 : <text class="number">88元</text>
+        <!-- 价格 -->
+          <text class="time">价格 : <text class="number">￥{{activity.price}}</text>
           <text decode>&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <!-- 会员价 -->
           <text class="vip">会员价</text>
           <text decode>&nbsp;</text>
-          <text class="money">58元</text>
+          <text class="vipmoney">￥{{activity.vipPrice||activity.price}}</text>
         </text>
+        <!--
+        <navigator class="right-r" url="./vip/vip">成为会员</navigator>-->
       </view>
     </view>
-    <view class="box-bottom">
+    <view class="box-bottom" bindtap="Textroster" >
       <view class="img in-b">
-        <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+        <image mode="widthFix" src="{{list[0].headimgurl}}"></image>
       </view>
-      <view class="pop in-b">68人已报名 <i class="iconfont icon-right-r-copy"></i> </view>
+      <view class="img in-b">
+        <image mode="widthFix" src="{{list[1].headimgurl}}"></image>
+      </view>
+      <view class="img in-b">
+        <image mode="widthFix" src="{{list[2].headimgurl}}"></image>
+      </view>
+      <view class="img in-b">
+        <image mode="widthFix" src="{{list[3].headimgurl}}"></image>
+      </view>
+      <view class="img in-b">
+        <image mode="widthFix" src="{{list[4].headimgurl}}"></image>
+      </view>
+      <block wx:if="{{isSex !='1'}}" >
+      <view class="right-r pop in-b">已报名{{usercount}}人/限{{maxNum}}人 <i class="iconfont icon-right-r-copy"></i> 
+      </view>
+      </block>
+      <block wx:if="{{isSex =='1'}}" >
+      <view class="right-r pop in-b">已报名{{usercount}}人({{activity.menPeoples}}男{{activity.womenPeoples}}女)/{{maxNum}}人 <i class="iconfont icon-right-r-copy"></i> 
+      </view>
+      </block>
     </view>
   </view>
   
@@ -39,16 +83,38 @@
   <view class="info1">
   <!-- ----------------------------------------------主办方 -->
     <view class="top">主办方/活动达人</view>
-    <view class="boss">
+    <view class="boss" id="{{fromOpenid}}" wx:if="{{fromOpenid =='xbyqw'}}">
       <view class="img left-l">
-        <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+        <image mode="widthFix" src="{{activity.headimgurl }}"></image>
       </view>
       <view class="cunzhang left-l">
-        <view class="text1">灿烂单身白领婚恋圈 <text>个人认证</text></view>
-        <view class="text2">"灿烂单身白领婚恋圈" 真实靠谱，婚恋效果好，打造高品质婚恋交友平台打造高品质婚恋交友平</view>
+        <!-- <view class="text1">灿烂单身白领婚恋圈 <text>个人认证</text></view>
+        <view class="text2">"灿烂单身白领婚恋圈" 真实靠谱，婚恋效果好，打造高品质婚恋交友平台打造高品质婚恋交友平</view> -->
+        <view class="text1">PS：该活动为下班一起玩官方活动，品质保证，请大家放心报名参加！</view>
         <view class="left-l xin">
-          <view class="in-b"><icon class="iconfont icon-xin"></icon>粉丝 <text>559</text></view>
-          <view class="in-b"><icon class="iconfont icon-biaoqian"></icon>粉丝 <text>669</text></view>
+          <view class="in-b"><i class="iconfont icon-xin"></i>粉丝<text>{{favs}}</text></view>
+          <view class="in-b"><i class="iconfont icon-biaoqian"></i>活动<text>{{timelines}}</text></view>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+
+    <view class="boss" id="{{fromOpenid}}" wx:if="{{fromOpenid !='xbyqw'}}">
+      <view class="img left-l">
+        <image mode="widthFix" src="{{activity.headimgurl }}"></image>
+      </view>
+      <view class="cunzhang left-l">
+        <view class="text1">{{activity.nickname}} 
+        <block wx:if="{{count >0}}">
+        (微信:{{activity.phone}})
+        </block>
+        <text>认证达人</text></view> 
+        
+        <!--<view class="text2">"灿烂单身白领婚恋圈" 真实靠谱，婚恋效果好，打造高品质婚恋交友平台打造高品质婚恋交友平</view> -->
+        
+        <view class="left-l xin">
+          <view class="in-b"><icon class="iconfont icon-xin"></icon>粉丝<text>{{favs}}</text></view>
+          <view class="in-b"><icon class="iconfont icon-biaoqian"></icon>活动<text>{{timelines}}</text></view>
         </view>
       </view>
       <view class="clear"></view>
@@ -58,11 +124,7 @@
     <view class="info1">
       <view class="top">活动详情</view>
       <view class="active">
-        <view class="theme">主题: 狼人杀</view>
-        <view class="time">时间：</view>
-        <view class="text">11月14日 （周四）晚8：30~9：30</view>
-        <view class="time">形式：</view>
-        <view class="text">第六届欧冠未呕吐解放军哦我IE积分叫我诶见佛忘记了奇偶IE五鼓风机偶家发加沃尔夫我借我奇偶饭加我</view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
       </view>
     </view>
     <!-- ----------------------------------------------活动Q/A -->
@@ -73,30 +135,10 @@
       <view class="active">
         <!-- <view class="problem">常见问题</view> -->
         <view class="text1 textq">Q : 如何联系到其他小伙伴呢</view>
-        <view class="text">A : 11月14日 （周四）晚8：30~9：30</view>
+        <view class="text">A：报名成功后点击进群按钮可打开活动群二维码，保存到手机然后用微信扫码可进入活动群</view>
         <view class="text1">Q : 报名参加活动临时有事来不了怎么办</view>
-        <view class="text">A : 第六届欧冠未呕吐解放军哦我IE积分叫我诶见佛忘记了奇偶IE五鼓风机偶家发加沃尔夫我借我奇偶饭加我</view>
+        <view class="text">A：在活动开始前24小时点击取消报名按钮，否则报名后不能到场签到系统将记录信用档案</view>
         
-      </view>
-    </view>
-
-    <view class="info2">
-      <!-- <view class="top">联系客服</view> -->
-      <view class="active">
-        <view class="kefu">联系客服</view>
-        <view class="box">
-          <view class="in-b left">
-            <view class="img" bindtap="imgtap">
-              <image mode="widthFix" src="/static/home/images/images/erweima2_03.png" show-menu-by-longpress="true"></image>
-            </view>
-          </view>
-          <view class="in-b right">
-            <view class="text1">下班一起玩公众号</view>
-            <view class="text2">每天下班后活动推荐</view>
-            <view class="text3">微信公众号直接搜索“下班一起玩”</view>
-          </view>
-          <view class="welcome">欢迎加入下班一起玩</view>
-        </view>
       </view>
     </view>
 
@@ -104,21 +146,401 @@
     <view class="content5 {{show ? 'img' : ''}}" catchtouchmove="true">
       <view class="bg" bindtap="bgtap"></view>
       <view class="box">
-        <image mode="widthFix" src="/static/home/images/images/erweima_03.png"></image>
+        <image mode="widthFix" src="https://xbyqw-1257190969.cos.ap-guangzhou.myqcloud.com/logo/wxercode.jpg" show-menu-by-longpress></image>
       </view>
     </view>
+</view>
+<!-- ----------------------------------------------------------------------------H-end -->
+
+<view>
+  <!-- <view class='top'>
+    <swiper class='banners' indicator-dots="true" autoplay="true" interval="4000" duration="1000" indicator-color="#60ffffff" indicator-active-color="#fff" circular="float">
+      <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.imgPath}}" class="banner" mode="aspectFill" bindtap='banner' data-index='{{index}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='Llrs'>浏览 {{click}}</view>
+  </view> -->
+
+  <!-- 
+  <view class='store'>
+    <view class='storeinfo' bindtap='handleMap'>
+      <view class='storemain'>
+        <view class='title'>地点：{{address}}</view>
+      </view>
+      <view class='verticalline'></view>
+      <image src="../../images/position.png" class='call' ></image>
+    </view>
+    <view class='location' bindtap='location'>
+      <view class='title'>时间：{{startTime}}</view>
+    </view>
+    <view class='storeinfo' bindtap='handleUser' id="{{fromOpenid}}">
+      <view class='storemain'>
+        <view class='title'>发起人：{{nickname}}</view>
+        
+      </view>
+      <image class="userinfo-avatar1" src="{{avatarUrl}}" background-size="cover"></image>
+    </view>
+    </view>
+ -->
+  <!-- 修改 -->
+  <!-- <view class='modifyStore'> -->
+    <!-- <view class='zizong'></view> -->
+    <!-- <view class='Qt'>{{typename}}</view> -->
+    <!-- 标题 -->
+    <!-- <view class='info'> -->
+      <!-- <view class='name' style='font-size:34rpx'>{{title}}</view> -->
+      <!-- 时间 -->
+      <!-- <view class='InfoSj' bindtap='location'>
+        <view class=''>
+          <icon class='iconfont icon-time'></icon> 时间：{{startTime}}
+        </view>
+        
+      </view> -->
+      <!--<view class="test-container" style='float:right;'>
+          <share-button
+            product="{{product}}"
+            bind:error="on_error"
+            type="1"
+          />
+          </view>
+       定位 -->
+      <!-- <view class='IfoDw' bindtap='handleMap' style='float:left;font-size:28rpx'>
+        <view class='title'>
+          <icon class='iconfont icon-dizhiguanli'></icon>地点：{{address}}</view>
+      </view> -->
+      <!-- <view class="money">价格: ￥{{activity.price}}
+      <text class='vip-money' >￥{{activity.vipPrice||activity.price}}</text><image  src="/images/vip.png"></image>
+      </view> -->
+      
+      <!-- <view wx:if="{{canJoin == '0'}}">
+        <view class='jishu'>
+          <icon class='iconfont icon-zhuangtai-yijujue IconFontss'></icon>
+          <view class='yijishu'>已结束</view>
+        </view>
+      </view>
+
+      <view wx:if="{{canJoin == '2'}}">
+        <view class='jishu '>
+          <icon class='iconfont icon-zhuangtai-yijujue IconFontss IconFontss1'></icon>
+          <view class='yijishu IconFontss1'>已满员</view>
+        </view>
+      </view>
+      <view wx:if="{{canJoin == '3'}}">
+        <view class='jishu '>
+          <icon class='iconfont icon-zhuangtai-yijujue IconFontss IconFontss1'></icon>
+          <view class='yijishu IconFontss1'>已成行</view>
+        </view>
+      </view> -->
+
+    <!-- </view> -->
+
+
+    <!-- <view class='viewBox' wx:if="{{count >0}}">
+      <view bindtap='toChat'>
+        <view class=' iconBOX'>
+          <icon class='iconfont icon-pinglun'></icon>
+        </view>
+        <text> 聚会临时活动群</text>
+        <icon class='iconfont icon-ziyuan right'></icon>
+      </view>
+    </view> -->
+  <!-- </view> -->
   
-  <view class="bottom">
-    <view class="item">
-      <icon class="iconfont icon-fenxiang" style="color: #c5b265"></icon>
-      <text>分享</text>
+  <!-- <view class='TipsBOX'>
+
+    <view class='Tips'>
+      <icon class='iconfont icon-laba left'></icon>
+      <view class='right'>报名成功后点击聚会临时活动群,保存活动群二维码到手机并用微信扫描进入活动群,报名成功后不能随意爽约,爽约3次将被暂停使用小程序,临时不能参加请提前在小程序取消报名</view>
     </view>
-    <view class="item">
-      <icon class="iconfont icon-tupian" style="color: #c5b265"></icon>
-      <text>生成海报</text>
+  </view> -->
+
+
+
+  <!-- <view class='modifyStore modifyStore1' id="{{fromOpenid}}" wx:if="{{fromOpenid =='xbyqw'}}">
+    <image class="userinfo-avatar1" src="{{avatarUrl}}" background-size="cover"></image>
+    <view class='info infoss'>
+      <view> PS：该活动为下班一起玩官方活动，品质保证，请大家放心报名参加！</view>
     </view>
-    <view class="item">
-      <button size="mini">报名</button>
+  </view> -->
+
+
+
+
+
+  <!-- <view class='grounp border_top_bottom'>
+    <view class='title'>已报名{{usercount}}人</view>
+    <view class='bmrs'>
+      <view class='bmrsLeft' wx:if="{{isSex !='1'}}">已报名{{usercount}}人/
+        限{{maxNum}}人
+      </view>
+      <view class='bmrsLeft' wx:if="{{isSex =='1'}}">
+      已报名{{usercount}}人({{menPeoples}}男{{womenPeoples}}女)/
+        限{{maxNum}}人({{men}}男{{women}}女)
+      </view>
+      <view class='bmerRight'>
+        {{minPeoples}}人成行
+      </view>
+    </view>
+
+    <view bindtap="Textroster" class="weui-panel__bd my_bd" style='overflow:hidden;position:relative'>
+      <view class="userinfo" wx:for="{{list}}" wx:key="list">
+        <image class="userinfo-avatar" src="{{item.headimgurl}}" background-size="cover"></image>
+
+        <view class='reddot' wx:if="{{item.num>1}}">{{item.num}}</view>
+      </view>
+      <icon class='iconfont icon-youhua' style='position:absolute;right:8px;top:51rpx;'></icon>
+    </view>
+  </view> -->
+  <!-- <view class='grounp border_top_bottom'>
+    <view class='title'>活动详情</view>
+    <view class='describe'>
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view> -->
+  <!--
+  <view class='messages'>
+    <view class='hdly'>
+      <icon class='iconfont icon-xinxi' style='margin-top:-7rpx;padding-right:7rpx;'></icon>
+      <text>活动留言</text>
+    </view>
+    <view class='text1s'>
+      <form bindsubmit="formSubmitComment" bindreset="formReset" report-submit='true'>
+        <view class='text1sLeft'>
+          <input type='text' placeholder='{{placeholder}}' style='margin:12rpx 0 0 20rpx;' bindchange="bindCommentChange" name="comments" value="{{comment}}"></input>
+        </view>
+        <button class='text1sRight' bindtap='confirm' formType="submit">发送</button>
+      </form>
+    </view>
+    <block wx:for='{{commentList}}' wx:for-item='comment' wx:for-index='index' wx:key='comment.id'>
+      <view class='Lyname'>
+        <view class='leftLyname'>
+          <image src="{{comment.comment.headimgurl}}"></image>
+        </view>
+        <view class='RightLyname'>
+          <view class='name' >{{comment.comment.nickname}}</view>
+          <view class='time' style='font-size:20rpx;color:#888888;line-height:32rpx'>{{comment.comment.timeStr}} {{index+1}}楼</view>
+          <view class='LYRight' bindtap='LYRight' data-commentid="{{comment.comment.id}}"  data-re="{{comment.comment.nickname}}">
+            <icon class='iconfont icon-pinglun' ></icon>
+          </view>
+          <view bindtap='modalinput'>{{comment.comment.content}}
+          </view>
+
+          <modal title="删除留言" hidden="{{hiddenmodalput}}" confirm-text="删除" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">删除留言会将回复一起删除,确定要删除留言吗？</modal>
+          <block wx:for='{{comment.childList}}' wx:for-item='child' wx:for-index='index1' wx:key='child.id'>
+          <view style='background:#f7f7f7;width:90%;line-height:50rpx;'>{{child.nickname}} 回复
+            <text style='color:#f28424'>{{comment.comment.nickname}}：</text> {{child.content}}</view>
+           </block> 
+        </view>
+      </view>
+    </block>
+  </view>
+-->
+
+
+  <!-- <view class='comments'>
+    <view class='conut'>留言
+    
+    </view>
+    <block wx:for='{{commentList}}' wx:for-item='comment' wx:for-index='index' wx:key='comment.id'>
+      <view class='comment'>
+        <image class='cover' src="{{comment.headimgurl}}" mode="aspectFill"></image>
+        <view class='info'>
+          <view class='name'>{{comment.nickname}}</view>
+          <view class='time'>{{comment.timeStr}} {{index+1}}楼</view>
+          <view class='msg'>{{comment.content}}</view>
+               
+        </view>
+      </view>
+ 
+    </block>
+  </view> -->
+  <!-- <view class='cannot' bindtap='modalinput'>留言</view>
+  <modal hidden="{{hiddenmodalput}}" title="留言" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input class="weui-input" placeholder="请输入留言" maxlength="100" bindchange="bindCommentChange"/>
+</modal>  -->
+
+  <!-- 常见问题 -->
+  <view class='cjwt'>
+    <view class='wtText'>
+      
+      
+      <button class='kefu' open-type="contact">
+        <icon class='iconfont icon-kefu1' style='margin-top:-12rpx'></icon>
+        联系客服
+      </button>
+    </view>
+    <view class='jrjhq'>
+      <view class='tubiao'>
+        <icon class='iconfont icon-hi' style='font-size:30rpx;margin-top:-12rpx;color:#fee364'></icon>
+        欢迎加入下班一起玩
+      </view>
+      <view class='qBox'>
+        <view class='image1'>
+          <image src='https://xbyqw-1257190969.cos.ap-guangzhou.myqcloud.com/logo/wxercode.jpg' data-src='https://xbyqw-1257190969.cos.ap-guangzhou.myqcloud.com/logo/wxercode.jpg' bindtap="imgtap" show-menu-by-longpress></image>
+        </view>
+        <view class='image2'>
+          <view style='font-size:30rpx;font-weight:600;padding-top:44rpx'>下班一起玩公众号</view>
+          <view style='font-size:26rpx;'>每天下班后活动推荐</view>
+          <view style='font-size:20rpx;'>微信公众号直接搜索“下班一起玩”</view>
+        </view>
+        
+        <view class='ps'>PS：保存二维码再微信识别</view>
+      </view>
+      <ad unit-id="adunit-cf7341c6ae5152ac"></ad>
+
+    </view>
+    
+  </view>
+
+</view>
+
+<form bindsubmit="formSubmit1" bindreset="formReset" report-submit='true'>
+
+
+  <view class='detailsBottom'>
+    <view class='BottomLeft'>
+      <view catchtap="lonBtn">
+        <icon class="iconfont icon-shouye"></icon>
+        <text>首页</text>
+      </view>
+
+      <view>
+        <view bindtap='showModal'>
+
+          <icon class="iconfont icon-fenxiang"></icon>
+          <text> 分享</text>
+        </view>
+      </view>
+      <view wx:if="{{fromOpenid == openid||'oE3T60EGIAvOwvbWxqCfcLpdaQq4' == openid||'oE3T60I6Ad46vdiBlcQW2vaeLPcI' == openid}}">
+        <view bindtap='toSetting'>
+          <icon class="iconfont icon-icon_shezhi"></icon>
+          <text> 管理</text>
+        </view>
+      </view>
+
+    </view>
+    <view class='BottomRight' formType="submit">
+    
+      <!-- <view style='position:absolute;bottom:15rpx;font-size:20rpx;margin-left:-22%;z-index:100;left:50%'>距离活动还有</view> -->
+      <view wx:if="{{canJoin == '1'||canJoin == '3'}}" class="baoming-box">
+        <view wx:if="{{count == 0}}" class="baoming-box-item">
+          <button class='gobuy' bindtap="formSubmit1" style='border-radius:0rpx; width: 100%;'>立即报名
+            <view class='textBOCX'>￥{{activity.priceDesc}}</view>
+          </button>
+        </view>
+        <view wx:if="{{count >0}}">
+          <view class='cancle'>
+            <view class='jqueng' bindtap='showAction'>
+              <icon class='iconfont icon-jieban'></icon>
+              <text>进群</text>
+            </view>
+            <!---->
+            <block wx:if="{{activity.activityType!='5'}}">
+            <view class='xianchang jqueng' bindtap='xianChang'>
+              <icon class='iconfont icon-camera'></icon>
+              <text>打卡</text>
+            </view>
+            </block>
+            <block wx:if="{{activity.activityType=='5'}}">
+            <view class='xianchang jqueng' bindtap='gotoselect'>
+              <icon class='iconfont icon-mian' style="color: #969696;"></icon>
+              <text>互选</text>
+            </view>
+            </block>
+            
+            
+            <view bindtap="handleTapCanel">取消报名</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{canJoin == '0'}}">
+        <view wx:if="{{count == 0}}" style='width:100%;height:100%;'>
+          <view class='cannot'>已结束</view>
+        </view>
+        <view wx:if="{{count >0}}">
+          <view class='cancle2'>
+          <view class='jqueng' bindtap='showAction'>
+              <icon class='iconfont icon-renshu'></icon>
+              <text>进群</text>
+            </view>
+          <view class='xianchang jqueng' bindtap='xianChang'>
+              <icon class='iconfont icon-paizhao'></icon>
+              <text>打卡</text>
+            </view>
+            <view >已结束</view>
+          </view>
+          
+        </view>
+      </view>
+      <view wx:if="{{canJoin == '2'}}">
+        <view wx:if="{{count == 0}}" style='width:100%;height:100%;'>
+          <view class='cannot'>已满员</view>
+        </view>
+        <view wx:if="{{count >0}}">
+        <view class='cancle'>
+        <view class='jqueng' bindtap='showAction'>
+              <icon class='iconfont icon-renshu'></icon>
+              <text>进群</text>
+            </view>
+          <view class='xianchang jqueng' bindtap='xianChang'>
+              <icon class='iconfont icon-paizhao'></icon>
+              <text>打卡</text>
+            </view>
+          <view bindtap="handleTapCanel">取消报名</view>
+          </view>
+        </view>
+
+      </view>
     </view>
   </view>
+
+</form>
+
+<modal hidden="{{hidden}}" title="聚会临时活动群二维码"  no-cancel="true" bindconfirm="confirm">
+    <image src='{{activity.groupErCode}}' data-src="{{activity.groupErCode}}" style='height:300px;weight:90%'></image>
+    保存到手机，打开微信扫一扫从相册选择此二维码
+</modal>
+
+
+
+
+
+<painter style="position:fixed;top:-9999rpx" customStyle='' palette="{{template}}" bind:imgOK="onImgOK" />
+
+
+
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="{{hideShareInfo==true?'bottom-dialog-body1':'bottom-dialog-body'}} bottom-pos" animation="{{animationData}}">
+    <view class="flex-sub text-center" hidden="{{hideShareInfo}}">
+      <view class="solid-bottom text-xl padding">
+        <text class="text-black text-bold">分享后可赚取佣金{{shareMoney}}元</text>
+      </view>
+      <view class="padding">朋友通过你分享的链接成功付款参加活动后，你可获得对应的佣金</view>
+    </view>
+    <view class='bottom'>
+      <button class='shareBut user-motto' bind:tap='saveImage'>生成海报</button>
+      <button class='shareBut user-motto' id="shareBtn" bind:tap='hideModal' open-type="share" hover-class="other-button-hover">
+      分享给朋友
+      </button>
+    </view>
+    
+    </view>
 </view>
+
+  <!--圆形点击框  -->
+<view class="round-click" bindtap='showModal' wx:if="{{isPay =='1'}}">
+   <text >赚</text >
+</view>
+
+<!-- <authorize bind:onLoadFun='onLoadFun'></authorize> -->
+
+
+
+
+
