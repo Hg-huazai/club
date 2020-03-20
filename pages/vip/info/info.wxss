@@ -12,9 +12,16 @@ page {
   top: 440rpx;
   /* width: 100%; */
   right: 10rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: #fff;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .content1 .bg .like .iconfont{
-  font-size: 80rpx;
+  font-size: 50rpx;
 }
 .icon-mian-copy:before {
   content: "\feae";

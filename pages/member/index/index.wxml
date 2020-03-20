@@ -27,7 +27,7 @@
       </view> 
       <view class="clear"></view>
     </navigator>
-    <view class="content-item1">
+    <navigator class="content-item1" url="../lucky/lucky">
       <view class="left-l">
         <icon class="iconfont icon-lingjuanzhongxin"></icon>
         <text class="text">我的桃花劵</text>
@@ -38,7 +38,7 @@
         <icon class="iconfont icon-right-r-copy"></icon>
       </view> 
       <view class="clear"></view>
-    </view>
+    </navigator>
     <view class="content-item1">
       <view class="left-l">
         <icon class="iconfont icon-kefu"></icon>

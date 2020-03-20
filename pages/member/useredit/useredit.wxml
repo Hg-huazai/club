@@ -1,0 +1,158 @@
+<!--pages/member/useredit/useredit.wxml-->
+
+<form bindsubmit="formSubmit" report-submit='true'>
+  <view class="desc_view">上传照片(请至少上传一张照片)</view>
+  <view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imageList}}" wx:key="{{index}}" bindtap="previewImage" data-url="{{imageList[index]}}">
+				<image src='{{imageList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="deleteImage" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="uploadImgs" >
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+  <view class="desc_view">基本资料(必填)</view>
+  <view class="cu-form-group ">
+		<view class="title">昵称</view>
+    <view class="weui-cell__bd_right">
+		<input class="weui-input" placeholder="请输入昵称" maxlength="16" name="nickname" value="{{fuser.nickname}}"/>
+    </view>
+	</view>
+  <view class="cu-form-group ">
+		<view class="title">真实姓名</view>
+    <view class="weui-cell__bd_right">
+		<input class="weui-input" placeholder="请输入真实姓名" maxlength="16" name="name" value="{{user.name}}"/>
+    </view>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">性别</view>
+    
+    <picker bindchange="bindSexChange" value="{{sexIndex}}" range="{{sexArray}}">
+			<view class="picker">
+				{{sexArray[sexIndex]}}
+			</view>
+		</picker>
+
+	</view>
+  <view class="cu-form-group ">
+		<view class="title">微信号(互选后才可查看)</view>
+    <view class="weui-cell__bd_right">
+		<input class="weui-input" placeholder="请输入微信号" maxlength="16" name="webchat" value="{{user.webchat}}"/>
+    </view>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">生日</view>
+		<view class='sj'>
+          <icon class='iconfont icon-youhua' style='float:right;margin-top:-1rpx;padding-left:10px;'></icon>
+          
+          <picker class="weui-cell__bd" mode="date" value="{{date}}" start="1970-01-01" end="2010-01-01" bindchange="bindDateChange">
+            {{date}}
+          </picker>
+        </view>
+	</view>
+  
+  <view class="cu-form-group">
+		<view class="title">身高</view>
+    <view class="weui-cell__bd_right">
+		<input class="weui-input" placeholder="请输入身高" maxlength="16" name="high" value="{{user.high}}"/>
+    </view>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">学历</view>
+    
+    <picker bindchange="bindEduChange" value="{{eduIndex}}" range="{{eduArray}}">
+			<view class="picker">
+				{{eduArray[eduIndex]}}
+			</view>
+		</picker>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">毕业院校</view>
+		<view class="weui-cell__bd_right">
+          <input class="weui-input" type="text" name="school" placeholder="请输入毕业院校"  value="{{user.school}}"/>
+    </view>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">所在城市</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+          </picker>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">职业</view>
+    
+    <picker bindchange="bindWorkChange" value="{{workIndex}}" range="{{workArray}}">
+			<view class="picker">
+				{{workArray[workIndex]}}
+			</view>
+		</picker>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">年收入</view>
+    
+    <picker bindchange="bindFeeChange" value="{{feeIndex}}" range="{{feeArray}}">
+			<view class="picker">
+				{{feeArray[feeIndex]}}
+			</view>
+		</picker>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">婚姻状况</view>
+    
+    <picker bindchange="bindMarryChange" value="{{marryIndex}}" range="{{marryArray}}">
+			<view class="picker">
+				{{marryArray[marryIndex]}}
+			</view>
+		</picker>
+
+	</view>
+  <view class="cu-form-group">
+		<view class="title">星座</view>
+    
+    <picker bindchange="bindStarChange" value="{{startIndex}}" range="{{starArray}}">
+			<view class="picker">
+				{{starArray[startIndex]}}
+			</view>
+		</picker>
+
+	</view>
+
+  <view class="cu-form-group" bindtap="bindKeyword" data-type="2">
+		<view class="title">兴趣爱好</view>
+    
+    <view class="weui-cell__bd_right">
+          {{likes}}
+    </view>
+
+	</view>
+  
+	<view class="desc_view">个人独白</view>
+  <view class="cu-form-group ">
+		<textarea rows="6" maxlength="-1" style="height:100px;"  bindinput="textareaAInput" placeholder="请输入个人独白，可写:性格特点,生活习惯,优缺点,爱情观等" maxlength="50000" class='textareaS' name="intro" value="{{user.intro}}"></textarea>
+	</view>
+  <view class="desc_view">我喜欢的TA</view>
+  <view class="cu-form-group ">
+		<textarea rows="6" maxlength="-1" style="height:100px;"  bindinput="textareaAInput" placeholder="请填写你喜欢的类型，期待的另一半" maxlength="50000" class='textareaS' name="standard" value="{{user.standard}}"></textarea>
+	</view>
+	
+<view class="padding flex flex-direction">
+  
+  <button class="cu-btn bg-red margin-tb-sm lg" formType="submit">提交资料</button>
+</view>
+
+
+	
+</form>
+
+<authorize bind:onLoadFun='onLoadFun'></authorize>

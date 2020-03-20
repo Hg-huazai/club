@@ -1,0 +1,32 @@
+<!--pages/news/addwx/addwx.wxml-->
+<view>
+  <view class="top-number">
+    <view class="left-l">
+      <text>桃花劵</text>
+    </view>
+    <view class="right-r">
+      <text>1张</text>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <view class="top-number top2">
+    <view class="left-l">
+      <text>免费获取桃花卷</text>
+    </view>
+    <view class="right-r">
+      <text>使用红包</text>
+    </view>
+    <view class="clear"></view>
+  </view>
+
+  <view class="like">
+    <form>
+      <view class="textarea">
+        <textarea placeholder="给对方塞一张小纸条~"></textarea>
+      </view>
+      <view class="button">
+        <button>翻牌子</button>
+      </view>
+    </form>
+  </view>
+</view>

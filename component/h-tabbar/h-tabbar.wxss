@@ -3,7 +3,7 @@
   /* background-color: pink; */
   display: flex;
   padding: 5rpx 0;
-  border-top: 1rpx solid #eeeeee;
+  /* border-top: 1rpx solid #eeeeee; */
   position: fixed;
   bottom: 0;
   width: 100%;

@@ -5,28 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabbar1:[
-      { name: '活动', icon: 'icon-huodong', url: '/pages/home/index/index'},
-      { name: '消息', icon: 'icon-xiaoxi6', url: '/pages/news/index/index'},
-      { name: '我的', icon: 'icon-wodedangxuan', url: '/pages/member/index/index'},
-    ],
-    tabbar2: [
-      { name: '活动', icon: 'icon-huodong', url: '/pages/home/index/index'},
-      { name: '嘉宾', icon: 'icon-jiabin', url: '/pages/vip/index/index' },
-      { name: '消息', icon: 'icon-xiaoxi6', url: '/pages/news/index/index'},
-      { name: '我的', icon: 'icon-wodedangxuan', url: '/pages/member/index/index'},
-    ],
-    show: true,
-    curren: 0,
+  
     tabbar: false,
     tabcurren: 2,
+    info: [
+      { name: '源子柔1', content: '你好，我可以认识你吗', url:'/static/home/images/active_03.png'},
+      { name: '源子柔2', content: '你好，我可以认识你吗', url: '/static/home/images/active_03.png' },
+      { name: '源子柔3', content: '你好，我可以认识你吗', url: '/static/home/images/active_03.png' },
+      { name: '源子柔4', content: '你好，我可以认识你吗', url: '/static/home/images/active_03.png' },
+      { name: '源子柔5', content: '你好，我可以认识你吗', url: '/static/home/images/active_03.png' },
+      { name: '源子柔6', content: '你好，我可以认识你吗', url: '/static/home/images/active_03.png' },
+    ]
   },
-  tabbar(e){
-    // console.log(e)
-    this.setData({
-      curren: e.currentTarget.dataset.curren
+  itemtap(e){
+    console.log(e)
+    var id = e.currentTarget.dataset
+    console.log(id)
+    wx.navigateTo({
+      url: '../message/message?id='+id,
     })
   },
+  
 
   /**
    * 生命周期函数--监听页面加载

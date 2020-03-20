@@ -33,7 +33,7 @@
   <view class="content1">
     <view class="content1-top">
       <view class="city left-l" bindtap="citytap">{{name}}<i class="iconfont {{icon ? 'icon-jiantou':'icon-jiantou-copy'}}"></i></view>
-      <view class="input left-l"><input placeholder="路线/领队/游记"></input> <i class="iconfont icon-sousuo"></i></view>
+      <view class="input left-l"><input placeholder="输入活动主题/关键字查询"></input> <i class="iconfont icon-sousuo"></i></view>
       <view class="time right-r"><i class="iconfont icon-shizhong"></i></view>
       <view class="clear"></view>
     </view>
@@ -49,61 +49,6 @@
       </swiper>
     </view>
   </view>
-  <!-- <view class="content2">
-    <view class="box-item">
-      <view class="item">
-        <iconfont name="ziyuan1"></iconfont>
-        <view class="text">享美食</view>
-      </view>
-      <view class="item">
-        <iconfont name="youxi"></iconfont>
-        <view class="text">玩桌游</view>
-      </view>
-      <view class="item">
-        <iconfont name="diy"></iconfont>
-        <view class="text">DIY</view>
-      </view>
-      <view class="item">
-        <iconfont name="wozuji"></iconfont>
-        <view class="text">趣运动</view>
-      </view>
-      <view class="item">
-        <iconfont name="wozuji"></iconfont>
-        <view class="text">去户外</view>
-      </view>
-      <view class="item">
-        <iconfont name="tongxue"></iconfont>
-        <view class="text">交友聚会</view>
-      </view>
-      <view class="item">
-        <iconfont name="rili1"></iconfont>
-        <view class="text">活动日历</view>
-      </view>
-      <view class="item">
-        <iconfont name="tuandui2"></iconfont>
-        <view class="text">团队定制</view>
-      </view>
-      <view class="item">
-        <iconfont name="huiyuan"></iconfont>
-        <view class="text">会员专享</view>
-      </view>
-      <view class="item">
-        <iconfont name="fenlei1"></iconfont>
-        <view class="text">全部分类</view>
-      </view>
-    </view>
-  </view>
-  <view class="content3">
-    <view class="item">
-      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
-    </view>
-    <view class="item">
-      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
-    </view>
-    <view class="item">
-      <image mode="widthFix" src="/static/home/images/wuhan_05.png"></image>
-    </view>
-  </view> -->
   <view class="content4">
     <block wx:for="{{activitylist}}" wx:for-item='item' wx:key='item.id' >
     <view class="item1" wx:if="{{item.activityType=='3'}}" bindtap='handleTapActivity' data-item="{{item}}" id="{{item.id}}" >

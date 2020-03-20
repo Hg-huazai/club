@@ -1,0 +1,29 @@
+/* pages/news/addwx/addwx.wxss */
+page {
+  background-color: #fafafa;
+}
+.top-number {
+  background-color: #fff;
+  padding: 60rpx 30rpx;
+  font-size: 32rpx;
+  color: #333333;
+}
+.top-number.top2 {
+  background-color: #fafafa;
+  color: #d6807f;
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.like .textarea {
+  background-color: #fff;
+  padding: 30rpx;
+}
+.like .button {
+  padding: 30rpx;
+  padding-top: 60rpx;
+}
+.like .button button{
+  width: 100%;
+  color: #fff;
+  background-color: #333333;
+}

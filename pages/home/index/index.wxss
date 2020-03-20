@@ -11,7 +11,7 @@ page {
 .content1 {
   position: relative;
 }
-.content .content1-top {
+.content1-top {
   /* background-color: pink; */
   padding: 20rpx 30rpx;
   width: 100%;
@@ -20,42 +20,44 @@ page {
   top: 0;
   z-index: 1;
 }
-.content .content1-top .city{
-  width: 20%;
+.content1-top .city{
+  width: 18%;
   color: #fff;
-  font-size: 38rpx;
-  padding-top: 10rpx;
+  font-size: 34rpx;
+  padding-top: 20rpx;
 }
-.content .content1-top .city .iconfont{
+.content1-top .city .iconfont{
   font-size: 25rpx;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
 }
-.content .content1-top .input {
-  width: 68%;
+.content1-top .input {
+  width: 70%;
   position: relative;
 }
-.content .content1-top .input i{
+.content1-top .input i{
   position: absolute;
   left: 15rpx;
-  top: 15rpx;
+  top: 11rpx;
   font-size: 43rpx;
   color: #8b8b8b;
 }
-.content .content1-top .input input {
+.content1-top .input input {
   background-color: #fff;
-  padding: 15rpx 30rpx;
-  border-radius: 25rpx;
+  padding: 10rpx 30rpx 15rpx;
+  border-radius: 10rpx;
   padding-left: 70rpx;
+  height: 66rpx;
+  margin-top: 10rpx;
 }
-.content .content1-top .time {
+.content1-top .time {
   width: 10%;
   box-sizing: border-box;
   text-align: center;
-  padding-top: 11rpx;
+  padding-top: 5rpx;
   padding-left: 10rpx;
 }
-.content .content1-top .time i{
-  font-size: 55rpx;
+.content1-top .time i{
+  font-size: 50rpx;
   color: #fff;
 }
 .content1-swiper swiper {
@@ -116,6 +118,7 @@ page {
   padding: 20rpx;
   padding-top: 5rpx;
   box-sizing: border-box;
+  padding-bottom: 93rpx;
 }
 .content4 .item1 {
   position: relative;

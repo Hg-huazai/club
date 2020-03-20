@@ -68,7 +68,7 @@ Page({
 
   editUser:function(){
     wx.navigateTo({
-      url: '/pages/useredit/useredit',
+      url: '/pages/member/useredit/useredit',
     })
   },
 

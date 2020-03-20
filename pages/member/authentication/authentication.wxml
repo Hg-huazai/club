@@ -1,0 +1,66 @@
+<!--pages/member/authentication/authentication.wxml-->
+<view>
+  <view class="top-tip">
+    <view>
+      <text>请确认您的以下信息填写正确，不然可能认证不通过的哦~</text>
+    </view>
+    <view>
+      <text>我们保证将对您的信息严格保密，您的填写信息将仅用于本次信息认证。</text>
+    </view>
+  </view>
+  <view class="info-item">
+    
+    <form bindsubmit="formtijiao">
+      <view class="name">
+        <text>姓名:</text>
+        <input class="in-b" placeholder="请输入姓名" type="type" name="name"></input>
+      </view>
+      <view class="name">
+        <text>身份证号码:</text>
+        <input class="in-b" placeholder="请输入身份证号码" type="number" name="number"></input>
+      </view>
+
+      <view class="item">
+      <view class="title">
+        <text>拍摄上传</text>
+        <text>身份证上传</text>
+      </view>
+      <view class="img">
+        <view class="box box1">
+          <image mode="widthFix" src="/static/home/images/images/renzheng_03.png"></image>
+        </view>
+        <view class="box box2">
+          <image mode="heightFix" src="{{urlimg1}}"></image>
+          <view class="tip {{show1 ? 'show1' : ''}}">
+            <text bindtap="imgtap1">点击上传</text>
+            <text>参考左图上传证件照</text>
+          </view>
+        </view>
+        <view class="close iconfont icon-guanbi {{show1 ? '' : 'active'}}" bindtap="closetap1"></view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="title">
+        <text>拍摄上传</text>
+        <text>学生证、毕业证或者学信网的截图</text>
+      </view>
+      <view class="img">
+        <view class="box box1">
+          <image mode="widthFix" src="/static/home/images/images/renzheng_03.png"></image>
+        </view>
+        <view class="box box2">
+          <image mode="heightFix" src="{{urlimg2}}"></image>
+          <view class="tip {{show2 ? 'show2' : ''}}">
+            <text bindtap="imgtap2">点击上传</text>
+            <text>参考左图上传证件照</text>
+          </view>
+        </view>
+        <view class="close iconfont icon-guanbi {{show2 ? '' : 'active'}}" bindtap="closetap2"></view>
+      </view>
+    </view>
+      <view class="button">
+        <button formType="submit" bindtap="renzhengtab">{{renzheng}}</button>
+      </view>
+    </form>
+  </view>
+</view>

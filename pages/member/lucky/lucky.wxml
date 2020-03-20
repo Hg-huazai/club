@@ -1,0 +1,141 @@
+<!--pages/member/lucky/lucky.wxml-->
+<view>
+  <view class="top-title">
+    <view class="left-l">
+      <view class="now">当前拥有</view>
+      <view class="number">
+        <text>0</text>
+        <text>张</text>
+      </view>
+    </view>
+    <view class="right-r">
+      <text>桃花劵记录</text>
+      <i class="iconfont icon-right-r-copy"></i>
+    </view>
+    <view class="clear"></view>
+  </view>
+
+  <view class="content">
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-gerenziliao2"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>完善个人资料</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>+3张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <text>去完善</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-gerenziliao"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>完善身份认证</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>首次认证+5张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <navigator class="right-r" url="../authentication/authentication">
+        <text>去认证</text>
+      </navigator>
+      <view class="clear"></view>
+    </view>
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-haoyoutuijiankuai-zhengchangtai-copy"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>分享给好友</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>+1~5张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <text>去分享</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-kefu1"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>添加客服微信</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>+1张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <text>去添加</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-xinyuanqiang"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>首次发布个人动态</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>+1张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <text>去发布</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="item">
+      <view class="left-l">
+        <view class="left">
+          <i class="iconfont icon-rili2"></i>
+          <view class="in-b">
+            <view class="info">
+              <text>连续7日登陆小程序</text>
+            </view>
+            <view class="number">
+              <text>桃花卷</text>
+              <text>+1张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+
+
+</view>

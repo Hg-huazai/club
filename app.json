@@ -4,12 +4,16 @@
     "pages/home/index/index",
     "pages/home/tabbar/tabbar",
     "pages/home/details/details",
-
     "pages/vip/index/index",
     "pages/vip/info/info",
     "pages/news/index/index",
+    "pages/news/message/message",
+    "pages/news/addwx/addwx",
     "pages/member/index/index",
     "pages/member/info/info",
+    "pages/member/useredit/useredit",
+    "pages/member/lucky/lucky",
+    "pages/member/authentication/authentication",
     "pages/index/index",
     "pages/logs/logs",
     "pages/pubuliu/index/index"

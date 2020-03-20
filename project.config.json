@@ -93,6 +93,41 @@
 					"id": -1,
 					"name": "嘉宾",
 					"pathName": "pages/vip/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "编辑个人资料",
+					"pathName": "pages/member/useredit/useredit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的桃花劵",
+					"pathName": "pages/member/lucky/lucky",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "身份认证",
+					"pathName": "pages/member/authentication/authentication",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息->留言板",
+					"pathName": "pages/news/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加微信",
+					"pathName": "pages/news/addwx/addwx",
 					"scene": null
 				}
 			]

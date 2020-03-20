@@ -1,0 +1,178 @@
+/* pages/news/message/message.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.item {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+}
+.item .left-l .img {
+  vertical-align: middle;
+}
+.item .left-l .img image{
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.item .left-l .info {
+  vertical-align: middle;
+  padding-left: 25rpx;
+}
+.item .left-l .info .name {
+  vertical-align: middle;
+  color: #222222;
+  font-size: 36rpx;
+}
+.item .right-r  {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20rpx;
+}
+.item .right-r .in-b.box {
+  border: 1rpx solid #d3d3d3;
+  vertical-align: middle;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 70rpx;
+}
+.item .right-r .in-b.box .iconfont{
+  font-size: 40rpx;
+}
+.item .right-r .in-b.box .iconfont{
+  color: #d3d3d3;
+}
+.item .right-r .in-b.box .iconfont.red{
+  color: #ff466d;
+}
+.item .right-r .in-b.wx {
+  vertical-align: middle;
+  border: 1rpx solid #fd476d;
+  margin-left: 20rpx;
+  height: 70rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  line-height: 70rpx;
+  /* padding: 0 20rpx; */
+  color: #fd476d;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.item .right-r .in-b.wx button{
+  height: 70rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+  line-height: 70rpx;
+  /* padding: 0 20rpx; */
+  color: #fd476d;
+  font-size: 30rpx;
+}
+
+/* 聊天 */
+.chat {
+  background-color: #f5f5f5;
+  padding: 0 30rpx;
+}
+.chat .time {
+  text-align: center;
+  margin: 30rpx 0;
+}
+.chat .time text{
+  display: inline-block;
+  background-color: #d9d9d9;
+  color: #f5f5f5;
+  padding: 5rpx 10rpx;
+}
+.chat .left {
+  margin-bottom: 30rpx;
+}
+.chat .left .img {
+  vertical-align: top;
+  margin-right: 30rpx;
+  
+}
+.chat .left .img image{
+  width: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.chat .left .content {
+  vertical-align: middle;
+  width: 470rpx;
+  color: #232323;
+  border-radius: 10rpx;
+  /* padding: 24rpx 0; */
+}
+.chat .left .content .box{
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 24rpx 15rpx;
+  border-radius: 10rpx;
+}
+
+/* 我方聊天 */
+.chat .right {
+  margin-bottom: 30rpx;
+}
+.chat .right .img {
+  vertical-align: top;
+  margin-left: 30rpx;
+  
+}
+.chat .right .img image{
+  width: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.chat .right .content {
+  vertical-align: middle;
+  width: 470rpx;
+  color: #232323;
+  border-radius: 10rpx;
+  /* padding: 24rpx 0; */
+}
+.chat .right .content .box{
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 24rpx 15rpx;
+  border-radius: 10rpx;
+  float: right;
+}
+
+/* 消息框 */
+.fasong {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10rpx 5%;
+  background-color: #f9f9f9;
+}
+.fasong .text{
+  vertical-align: top;
+  display: inline-block;
+  width: 75%;
+  margin-right: 7%;
+  background-color: #fff;
+  padding: 15rpx 0;
+  /* box-sizing: border-box; */
+  overflow: inherit;
+  padding-left: 10rpx;
+
+}
+.fasong textarea{
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+
+}
+.fasong button{
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #ff476d;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22rpx;
+}

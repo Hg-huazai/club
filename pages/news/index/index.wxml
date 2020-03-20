@@ -1,10 +1,164 @@
 <!--pages/news/index/index.wxml-->
-<view class="tabbar">
-  <block wx:for="{{show ? tabbar1 : tabbar2 }}" wx:key="{{index}}">
-    <navigator class="tabbar-item {{index == curren ? 'active' : ''}}" data-curren="{{index}}" bindtap="tabbar" url="{{item.url}}">
-      <view class="iconfont {{item.icon}}"></view>
-      <view class="text">{{item.name}}</view>
+<view>
+  <view class="box">
+    <block wx:for="{{info}}" wx:key="{{index}}">
+      <view class="item" bindtap="itemtap" data-id="{{index}}">
+        <view class="left-l">
+          <view class="in-b img">
+            <image mode="widthFix" src="{{item.url}}"></image>  
+          </view>
+          <view class="in-b info">
+            <view class="name">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="text">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="right-r">
+          <i class="iconfont icon-xiangxiajiantoux"></i>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </block>
+    
+    <!-- <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
     </navigator>
-  </block>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="item" url="../message/message">
+      <view class="left-l">
+        <view class="in-b img">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>  
+        </view>
+        <view class="in-b info">
+          <view class="name">
+            <text>源子柔</text>
+          </view>
+          <view class="text">
+            <text>你好，可以认识你吗</text>
+          </view>
+        </view>
+      </view>
+      <view class="right-r">
+        <i class="iconfont icon-xiangxiajiantoux"></i>
+      </view>
+      <view class="clear"></view>
+    </navigator> -->
+  </view>
+  <view class="null">
+    <text>没有更多内容了</text>
+  </view>
 </view>
 <h-tabbar tabbar="{{tabbar}}" tabcurren="{{tabcurren}}"></h-tabbar>

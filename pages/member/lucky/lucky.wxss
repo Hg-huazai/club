@@ -1,0 +1,74 @@
+/* pages/member/lucky/lucky.wxss */
+page {
+  background-color: #fafafa;
+}
+.top-title {
+  padding: 40rpx 30rpx 30rpx;
+  background-color: pink;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.top-title .now{
+  padding-bottom: 20rpx;
+}
+.top-title .number text:nth-child(1){
+  font-weight: 600;
+  font-size: 50rpx;
+  color: #000;
+  padding-right: 5rpx;
+}
+.top-title .right-r{
+  margin-top: 80rpx;
+  background-color: #f9fdff;
+  color: #7a7e81;
+  padding: 5rpx 30rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.top-title .right-r text{
+  vertical-align: middle;
+  display: inline-block;
+}
+.top-title .right-r i{
+  font-size: 15rpx;
+  padding-left: 10rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+.content {
+  background-color: #fff;
+}
+.content .item{
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  padding-top: 10rpx;
+  
+  border-bottom: 1rpx solid #dbdbdb;
+}
+.content .item .left i {
+  vertical-align: top;
+  display: inling-block;
+  font-size: 55rpx;
+  padding-right: 20rpx;
+  color: #a2a2a2;
+}
+.content .item .left .in-b  {
+  vertical-align: middle;
+  display: inling-block;
+}
+.content .item .left .in-b .info  {
+  color: #333333;
+  font-size: 30rpx;
+}
+.content .item .left .in-b .number text:nth-child(2) {
+  color: #ed7775;
+  padding-left: 10rpx;
+}
+.content .right-r text{
+  margin-top: 40rpx;
+  display: inline-block;
+  padding:5rpx 20rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  border: 1rpx solid #333;
+}

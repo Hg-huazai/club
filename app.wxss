@@ -1,4 +1,13 @@
 /**app.wxss**/
+/* @import "icon.wxss"; */
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import 'style/weui.wxss';
+@import 'style/iconfont.wxss';
+@import 'font/iconfont-yqw.wxss';
+@import 'font/iconfont-huage.wxss';
+@import '/css/style.wxss';
+@import '/css/animate.wxss';
 .container {
   height: 100%;
   display: flex;
