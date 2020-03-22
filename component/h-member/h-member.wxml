@@ -1,0 +1,56 @@
+<!--component/h-member/h-member.wxml-->
+<!--pages/member/index/index.wxml-->
+<view>
+  <view class="content">
+    <view class="content-item">
+      <navigator class="left-l" url="/pages/member/info/info">
+        <view class="img in-b">
+          <image mode="widthFix" src="/static/home/images/active_03.png"></image>
+        </view>
+        <view class="text in-b">我的主页</view>
+      </navigator>
+      <view class="right-r">
+        <view class="ziliao">
+          <text>编辑资料</text>
+          <icon class="iconfont icon-right-r-copy"></icon>
+        </view>
+        <view class="iconfont icon-icon tupian"></view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <navigator class="content-item1" hover-class='none' url='/pages/member/info/info' bindtap='tapIndex'>
+      <view class="left-l">
+        <icon class="iconfont icon-xinyuandan"></icon>
+        <text class="text">个人动态</text>
+      </view>
+      <view class="right-r">
+        <icon class="iconfont icon-right-r-copy"></icon>
+      </view> 
+      <view class="clear"></view>
+    </navigator>
+    <navigator class="content-item1" url="/pages/member/lucky/lucky">
+      <view class="left-l">
+        <icon class="iconfont icon-lingjuanzhongxin"></icon>
+        <text class="text">我的桃花劵</text>
+      </view>
+      <view class="right-r">
+        <text class="text1">做任务领桃花劵</text>
+        <text class="text2">4.0</text>
+        <icon class="iconfont icon-right-r-copy"></icon>
+      </view> 
+      <view class="clear"></view>
+    </navigator>
+    <view class="content-item1">
+      <view class="left-l">
+        <icon class="iconfont icon-kefu"></icon>
+        <text class="text">客服消息</text>
+      </view>
+      <view class="right-r">
+        <text class="text2">2.0</text>
+        <icon class="iconfont icon-right-r-copy"></icon>
+      </view> 
+      <view class="clear"></view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,98 @@
+<!--pages/vip/vip/vip.wxml-->
+<view>
+<scroll-view scroll-y="true" style="height: {{windowHeight}}px;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+  <!-- 筛选 -->
+  <view class="screen">
+    <!--<view class="left-l">{{set1}}/{{ageSmall}}~{{ageMax}}/{{add}}</view>-->
+    <view class="right-r" bindtap="saixuantap">
+      <text>自定义筛选</text>
+      <i class="iconfont {{show1 ? 'icon-right-r-copy' : 'icon-jiantou'}}"></i>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <!-- 弹出层 -->
+    <view class="content5-float {{show1 ? 'img' : ''}}" catchtouchmove="true">
+      <view class="bg" bindtap="bgtap"></view>
+      <view class="box">
+        <view class="item1">
+          <view class="title">性别</view>
+          <view class="set radio" >
+            <view class="item {{index === curren1 ? 'active' : ''}}"  wx:for="{{set2}}" wx:key="{{index}}" data-curren="{{index}}" data-state="{{item.state}}" bindtap="settap">{{item.name}}</view>
+          </view>
+        </view>
+        <view class="item1">
+          <view class="title">年龄</view>
+          <view class="set age">
+            <view class="item">
+              <input type="number" placeholder="请输入最小年龄" bindblur="ageSmall" value="{{ageSmall}}" maxlength="2"></input>
+            </view>
+            <text>—</text>
+            <view class="item">
+              <input type="number" placeholder="请输入最大年龄" bindblur="ageMax" value="{{ageMax}}" maxlength="2"></input>
+            </view>
+          </view>
+        </view>
+        <view class="item1">
+          <view class="title">城市</view>
+          <view class="set city" >
+            <view class="item {{index === curren2 ? 'active' : ''}}" wx:for="{{city}}" wx:key="{{index}}" data-curren1="{{index}}" data-state="{{item.state}}" bindtap="citytap">{{item.name}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!--
+  <view class="swiper">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item>
+        <image src="https://xbyqw-1257190969.cos.ap-guangzhou.myqcloud.com/xbyqw/vip_swiper_02.png" mode="widthFix"></image>
+      </swiper-item>
+      
+    </swiper>
+  </view>
+  -->
+  <view class="content in-b left">
+    <view class="box" wx:for="{{list}}" wx:key="{{index}}" data-openid="{{item.openid}}" bindtap="touserdetail" wx:if="{{index%2 == 0}}">
+      <view class="item">
+        <view class="img">
+          <image mode="widthFix" src="{{item.photo}}"></image>
+        </view>
+        <view class="bottom">
+          <view class="name">
+            <text>{{item.name}}</text>
+            <block wx:if="{{item.sex=='0'}}"><i class="iconfont icon-xingbienv in-b"   style="color: #fe677a;"></i></block>
+            <block wx:if="{{item.sex=='1'}}"><i class="iconfont icon-xingbienan in-b" style="color: #4db6f5;"></i></block>
+          </view>
+          <view class="info">
+            <text class="in-b">{{item.age}}岁</text>
+            <text class="in-b">{{item.high}}</text>
+            <text class="in-b">{{eduArray[item.edu]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content in-b right">
+    <view class="box" wx:for="{{list}}" wx:key="{{index}}" data-openid="{{item.openid}}" bindtap="touserdetail" wx:if="{{index%2 == 1}}">
+      <view class="item">
+        <view class="img">
+          <image mode="widthFix" src="{{item.photo}}"></image>
+        </view>
+        <view class="bottom">
+          <view class="name">
+            <text>{{item.name}}</text>
+            <block wx:if="{{item.sex=='0'}}"><i class="iconfont icon-xingbienv in-b"   style="color: #fe677a;"></i></block>
+            <block wx:if="{{item.sex=='1'}}"><i class="iconfont icon-xingbienan in-b" style="color: #4db6f5;"></i></block>
+          </view>
+          <view class="info">
+            <text class="in-b">{{item.age}}岁</text>
+            <text class="in-b">{{item.high}}</text>
+            <text class="in-b">{{eduArray[item.edu]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+</view>
+

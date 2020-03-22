@@ -5,27 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabbar1: [
-      { name: '活动', icon: 'icon-huodong', state: 1 },
-      { name: '消息', icon: 'icon-xiaoxi6', state: 3 },
-      { name: '我的', icon: 'icon-wodedangxuan', state: 4 },
-    ],
-    tabbar2: [
-      { name: '活动', icon: 'icon-huodong', state: 1 },
-      { name: '嘉宾', icon: 'icon-jiabin', state: 2 },
-      { name: '消息', icon: 'icon-xiaoxi6', state: 3 },
-      { name: '我的', icon: 'icon-wodedangxuan', state: 4 },
-    ],
-    tabcurren: 0,
-    tabbar: false,
+
   },
 
-  tabbar(e) {
-    // console.log(e)
-    this.setData({
-      tabcurren: e.currentTarget.dataset.curren
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

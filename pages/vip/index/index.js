@@ -14,7 +14,6 @@ Page({
     add: '广州',
     ageSmall: 18,
     ageMax: 26,
-    tabbar: false,
     tabcurren: 1,
     set2: [
       { name: "男", state: 1 },

@@ -2,6 +2,7 @@
   
   "pages": [
     "pages/home/index/index",
+    "pages/home/index/ceshi",
     "pages/home/tabbar/tabbar",
     "pages/home/details/details",
     "pages/vip/index/index",

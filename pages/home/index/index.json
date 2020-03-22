@@ -1,4 +1,10 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+      "h-active": "/component/h-active/h-active",
+      "h-vip": "/component/h-vip/h-vip",
+      "h-news": "/component/h-news/h-news",
+      "h-member": "/component/h-member/h-member"
+      
+  },
   "navigationBarTitleText": "首页"
 }

@@ -23,7 +23,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
 	"appid": "wxb700a58c6ab5b8dd",
-	"projectname": "club",
+	"projectname": "club_tabbar",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

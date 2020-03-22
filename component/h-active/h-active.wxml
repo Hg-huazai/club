@@ -1,0 +1,131 @@
+<!--component/h-active/h-active.wxml-->
+<!--pages/home/index/index.wxml-->
+<view class="content">
+  <!-- 城市选择 -->
+  <view class="content5 {{show ? 'city' : ''}}" catchtouchmove="true">
+    <view class="bg" bindtap="bgtap"></view>
+    <view class="box">
+      <view class="box-top" >
+        <i class="iconfont icon-cuohao right-r" bindtap="closetap"></i>
+        <view class="clear"></view>
+      </view>
+      <view class="box-name">-请选择你的城市-</view>
+      <view class="box-city">
+        <view class="item" bindtap="nametap" wx:for="{{city}}" wx:key="index" data-state="{{index}}">
+          <!-- <iconfont name="{{item.icon}}"></iconfont> -->
+          <view class="img in-b">
+            <image mode="widthFix" src="{{item.src}}"></image>
+          </view>
+          <view class="text">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="box-bottom">-其他城市-</view>
+      <view class="item-bottom">
+        <view class="item">
+          <!-- <iconfont name="wozuji"></iconfont> -->
+          <view class="img in-b">
+            <image mode="widthFix" src="/static/home/images/images/city_03.png"></image>
+          </view>
+          <view class="text">全国</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content1">
+    <view class="content1-top">
+      <view class="city left-l" bindtap="citytap">{{name}}<i class="iconfont {{icon ? 'icon-jiantou':'icon-jiantou-copy'}}"></i></view>
+      <view class="input left-l"><input placeholder="输入活动主题/关键字查询"></input> <i class="iconfont icon-sousuo"></i></view>
+      <view class="time right-r"><i class="iconfont icon-shizhong"></i></view>
+      <view class="clear"></view>
+    </view>
+    <view class="content1-swiper">
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+        <block wx:for="{{swiperList}}" wx:key="{{index}}">
+          <swiper-item>
+                <navigator url='{{item.url}}' class='slide-navigator acea-row row-between-wrapper' hover-class='none'>
+                  <image mode="scaleToFill"  src="{{item.imgPath}}" />
+                </navigator>                
+              </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="content4">
+    <block wx:for="{{activitylist}}" wx:for-item='item' wx:key='item.id' >
+    <view class="item1" wx:if="{{item.activityType=='3'}}" bindtap='handleTapActivity' data-item="{{item}}" id="{{item.id}}" >
+      <view class="item1-top">
+        <view class="right-r baoming" wx:if="{{item.status =='0'}}">报名中</view>
+        <view class="right-r chenghang" wx:if="{{item.status =='3'}}">已成行</view>
+        <view class="right-r manyuan" wx:if="{{item.status =='2'}}">已满员</view>
+        <view class="clear"></view>
+      </view>
+      <view class="item1-center">
+        <view class="left-l img">
+          <image mode="scaleToFill" src="{{item.headimgurl}}"></image>
+        </view>
+        <view class="left-l info">
+
+          <view class="text">{{item.title}}</view>
+          <view class="text1">时间: {{item.startTime}}</view>
+          <view class="text1">地址: {{item.address}}</view>
+        </view>
+        <view class="clear"></view>
+      </view>
+      <view class="item1-bottom">
+        <view class="left-l">
+          <view class="img in-b" wx:for="{{item.users}}" wx:for-item='auser'>
+            <image mode="scaleToFill" src="{{auser.headimgurl}}"></image>
+          </view>
+          
+          <!-- <view class="text in-b">还差<text>14</text>人</view> -->
+        </view>
+        <view class="right-r">{{item.ausize}}/{{item.maxNum}}</view>
+        <view class="clear"></view>
+      </view>
+      <view class="float">
+        <view class="classfly">·{{typeArray[item.typeid]}}</view>
+      </view>
+    </view>
+
+    <view class="item2" wx:if="{{item.activityType!='3'}}" bindtap='handleTapActivity' data-item="{{item}}" id="{{item.id}}" >
+      <view class="item2-top">
+        <view class="img">
+          <image mode="scaleToFill" src="{{item.img}}"></image>
+          <view class="info">
+            <view class="sign-up">
+              <view class="left-l">
+                
+                <view class="classfly">· {{typeArray[item.typeid]}}</view>
+              </view>
+              <view class="right-r baoming" wx:if="{{item.status =='0'}}">报名中</view>
+              <view class="right-r chenghang" wx:if="{{item.status =='3'}}">已成行</view>
+              <view class="right-r manyuan" wx:if="{{item.status =='2'}}">已满员</view>
+              <view class="clear"></view>
+            </view>
+            <view class="theme">{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="item2-bottom">
+        <view class="left-l">
+          <view class="time">
+            <i class="iconfont icon-shizhong"></i>
+            <text>时间: {{item.startTime}}</text>
+          </view>
+          <view class="text6">
+            <i class="iconfont icon-didian"></i>
+            <text>地址: {{item.address}}</text>
+          </view>
+        </view>
+        <view class="right-r">
+          <view class="people right-r">{{item.ausize}}/{{item.maxNum}}</view>
+          <view class="money">¥{{item.price}}</view>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+    
+    </block>
+  </view>
+</view>
+
