@@ -1,19 +1,19 @@
 <!--pages/home/index/index.wxml-->
 <view class="content">
   <!-- 首页活动 -->
-  <view hidden="{{tabcurren == 0? false: true}}">
+  <view hidden="{{state == 1? false: true}}">
     <h-active/>
   </view>
   <!-- 嘉宾 -->
-  <view hidden="{{tabcurren == 1? false: true}}">
+  <view hidden="{{state == 2? false: true}}">
     <h-vip/>
   </view>
   <!-- 消息 -->
-  <view hidden="{{tabcurren == 2? false: true}}">
+  <view hidden="{{state == 3? false: true}}">
     <h-news/>
   </view>
   <!-- 我的 -->
-  <view hidden="{{tabcurren == 3? false: true}}">
+  <view hidden="{{state == 4? false: true}}">
     <h-member/>
   </view>
 

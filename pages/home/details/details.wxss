@@ -1158,7 +1158,7 @@ margin-left: 7rpx;
 .info .bg {
   transform:rotate(-10deg);
   position: absolute;
-  right: 50rpx;
+  right: 59rpx;
   top: 79rpx;
   font-size: 130rpx;
   /* color: red; */
@@ -1176,7 +1176,7 @@ margin-left: 7rpx;
   transform:rotate(-30deg);
   position: absolute;
   right: 71rpx;
-  top: 127rpx;
+  top: 133rpx;
   font-size: 30rpx;
 }
 .info .top{

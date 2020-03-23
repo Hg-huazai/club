@@ -1,8 +1,12 @@
 /* component/H-tabbar/H-tabbar.wxss */
+page {
+  padding: 0;
+  margin: 0;
+}
 .tabbar {
   /* background-color: pink; */
   display: flex;
-  padding: 5rpx 0;
+  /* padding: 5rpx 0; */
   /* border-top: 1rpx solid #eeeeee; */
   position: fixed;
   bottom: 0;
